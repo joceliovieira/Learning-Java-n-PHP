@@ -1,4 +1,4 @@
-# Variáveis
+# Variáveis e Tipos
 
 - Cada variável tem um nome e um 'valor' atribuído
 - O 'valor' (objeto armazenado na variável) pode mudar, enquanto o nome da variável não muda
