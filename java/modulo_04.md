@@ -45,7 +45,8 @@ public void countOnLoop(int numOfCount) {
 Existe um tipo de loop que realiza essa função de realizar um incremento a cada iteração, sendo esse o loop `for`.
 
 ## For
-https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html
+
+[Java docs: for Statement](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html)
 
 > *The for statement provides a compact way to iterate over a range of values. Programmers often refer to it as the "for loop" because of the way in which it repeatedly loops until a particular condition is satisfied. The general form of the for statement can be expressed as follows:*
 
