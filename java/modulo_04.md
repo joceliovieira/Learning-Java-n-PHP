@@ -51,7 +51,7 @@ Existe um tipo de loop que realiza essa função de realizar um incremento a cad
 > *The for statement provides a compact way to iterate over a range of values. Programmers often refer to it as the "for loop" because of the way in which it repeatedly loops until a particular condition is satisfied. The general form of the for statement can be expressed as follows:*
 
 ```java
-for (initialization; termination; kincrement) {
+for (initialization; termination; increment) {
     statement(s)
 }
 ```
@@ -61,3 +61,11 @@ for (initialization; termination; kincrement) {
 > - The initialization expression initializes the loop; it's executed once, as the loop begins.
 > - When the termination expression evaluates to false, the loop terminates.
 > - The increment expression is invoked after each iteration through the loop; it is perfectly acceptable for this expression to increment or decrement a value.
+
+## Contadores (*loop counters*)
+
+É importante não modificar o valor do contador/iterador dentro do loop, pois essa alteração provavelmente vai quebrar o loop, uma vez que a variável será atualizada no loop e na própria iteração do `for`.
+
+Nesse caso, é recomendado que seja atribuído o valor alterado do contador em uma nova variável. Dessa forma, o contador seguirá sendo incrementado pelo loop sem problemas.
+
+Também é possível realizar operações no contador sem problemas, desde que seu valor não seja atualizado. Por exemplo, printar um contador multiplicado por uma constante. Embora o valor printado seja um produto do contador, a variável do contador não tem seu valor atualizado.
