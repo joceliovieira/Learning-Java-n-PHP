@@ -69,3 +69,34 @@ for (initialization; termination; increment) {
 Nesse caso, é recomendado que seja atribuído o valor alterado do contador em uma nova variável. Dessa forma, o contador seguirá sendo incrementado pelo loop sem problemas.
 
 Também é possível realizar operações no contador sem problemas, desde que seu valor não seja atualizado. Por exemplo, printar um contador multiplicado por uma constante. Embora o valor printado seja um produto do contador, a variável do contador não tem seu valor atualizado.
+
+### Observação
+
+O contador nem sempre precisa conter um incremento positivo, como `i++`. Dessa forma, é possível realizar um incremento negativo como `i--`, onde o valor de `i` será subtraído de 1 a cada iteração do loop.
+
+Além disso, nem sempre o incremento precisa ser unitário. Além disso, podem ser utilizadas outra operações além de soma e subtração. Assim, é possível realizar incrementos com funções de multiplicação, divisão, etc.
+
+A seguir, alguns exemplos de contadores:
+
+- `i++`
+- `i--`
+- `i /= N`: nesse caso, o valor de `i` será dividido por N a cada iteração
+- `i *= N`: nesse caso, o valor é multiplicado por N a cada iteração
+
+## `break`
+
+O statement `break` encerra um loop. Dessa forma, pode ser bastante útil para ser usado em um teste de condição em que o loop deve ser encerrado.
+
+Dessa forma, ao ser utilizado dentro de um loop, ele pode ser inserido dentro do código de um `if` positivo, de forma que será executado após um teste onde a condição "bateu" e, portanto, o loop deve ser encerrado.
+
+Exemplo - `for`:
+
+```java
+int i = 0;
+for (i=0; i<=10; i++) {
+    if (i == 5) {
+        System.out.println("Condição de teste estabelecida. Saindo do loop...");
+        break;
+    }
+}
+```
