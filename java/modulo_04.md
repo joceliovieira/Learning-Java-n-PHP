@@ -1,6 +1,8 @@
-# Loops
+# Loops e Arrays
 
-## While
+## Loops
+
+### While
 
 `while` loops allow you to repeat an `if` condition over and over for as long as that condition remains `true`, hence the name `while`!
 
@@ -28,7 +30,7 @@ This code block above will continue to print the message "It's still raining out
 
 Unlike if blocks however, while loops don't have else blocks, they are simply like a repeated if block that would only end when the condition becomes false.
 
-### Incremento
+#### Incremento
 
 É comum ocorrer a necessidade de realizar contagens dentro de um loop para que ele se repita apenas uma determinada quantidade de vezes. Para tal, é possível realizar um incremento a cada iteração do loop, da seguinte forma.
 
@@ -44,7 +46,7 @@ public void countOnLoop(int numOfCount) {
 
 Existe um tipo de loop que realiza essa função de realizar um incremento a cada iteração, sendo esse o loop `for`.
 
-## For
+### For
 
 [Java docs: for Statement](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html)
 
@@ -62,7 +64,7 @@ for (initialization; termination; increment) {
 > - When the termination expression evaluates to false, the loop terminates.
 > - The increment expression is invoked after each iteration through the loop; it is perfectly acceptable for this expression to increment or decrement a value.
 
-## Contadores (*loop counters*)
+### Contadores (*loop counters*)
 
 É importante não modificar o valor do contador/iterador dentro do loop, pois essa alteração provavelmente vai quebrar o loop, uma vez que a variável será atualizada no loop e na própria iteração do `for`.
 
@@ -70,7 +72,7 @@ Nesse caso, é recomendado que seja atribuído o valor alterado do contador em u
 
 Também é possível realizar operações no contador sem problemas, desde que seu valor não seja atualizado. Por exemplo, printar um contador multiplicado por uma constante. Embora o valor printado seja um produto do contador, a variável do contador não tem seu valor atualizado.
 
-### Observação
+#### Observação
 
 O contador nem sempre precisa conter um incremento positivo, como `i++`. Dessa forma, é possível realizar um incremento negativo como `i--`, onde o valor de `i` será subtraído de 1 a cada iteração do loop.
 
@@ -83,7 +85,7 @@ A seguir, alguns exemplos de contadores:
 - `i /= N`: nesse caso, o valor de `i` será dividido por N a cada iteração
 - `i *= N`: nesse caso, o valor é multiplicado por N a cada iteração
 
-## `break`
+### `break`
 
 O statement `break` encerra um loop. Dessa forma, pode ser bastante útil para ser usado em um teste de condição em que o loop deve ser encerrado.
 
@@ -100,3 +102,26 @@ for (i=0; i<=10; i++) {
     }
 }
 ```
+
+## Arrays
+
+[Java Docs - arrays](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
+
+- Permite o armazenamento de diversas variáveis de um mesmo tipo em uma mesma variável.
+- O array é indexado com números para cada item da estrutura, inciando em 0, denominado "index" do array
+- Cada item dentro de um array é denominado "célula"
+- O array tem um tamanho (qtd. de células) fixo e esse valor deve ser declarado na criação da variável (declaração do array)
+
+Declarando um array, onde `type` é o tipo de dado que o array vai armazenar, e `[]` indica que é um array sendo criado:
+
+```java
+type[] nameOfArray;
+```
+
+Dessa forma, a variável foi declarada e poderá ser inicializada, alocando a quantidade de elementos dele:
+
+```java
+nameOfArray = new type[length]
+```
+
+Onde `nameOfArray` é o array inicializado, `new` é o operador que cria o array de fato, e `length` é o número de elementos que o array deve armazenar (quantidade de células).
