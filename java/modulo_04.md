@@ -125,3 +125,42 @@ nameOfArray = new type[length]
 ```
 
 Onde `nameOfArray` é o array inicializado, `new` é o operador que cria o array de fato, e `length` é o número de elementos que o array deve armazenar (quantidade de células).
+
+Ainda, podemos definir um array diretamente da seguinte forma:
+
+```java
+type[] arrayName = {values}
+```
+
+Exemplo: calculando a média de um array
+
+```java
+System.out.println("start");
+int i = 0;
+float mean = 0;
+float total = 0;
+int[] input_array =  {1,2,3,4,5,6,7,8,9,10};
+int len = input_array.length;
+System.out.println(java.util.Arrays.toString(input_array));
+System.out.println("len: " + len);
+for (i=0; i<len; i++) {
+    total += input_array[i];
+}
+mean = total / len;
+System.out.println(mean);   
+```
+
+### Alguns métodos do Array
+
+Referência: [Java docs: Arrays manipulations](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
+
+A seguir, temos alguns métodos importantes da classe de Arrays do Java.
+
+> Some other useful operations provided by methods in the java.util.Arrays class are:
+>
+> - `binarySearch`: Searching an array for a specific value to get the index at which it is placed
+> - `equals`: Comparing two arrays to determine if they are equal or not
+> - `fill`: Filling an array to place a specific value at each index
+> - `parallelSort`: Sorting an array into ascending order. This can be done either sequentially, using the sort method, or concurrently, using the parallelSort method introduced in Java SE 8. Parallel sorting of large arrays on multiprocessor systems is faster than sequential array sorting.
+> - `stream`: Creating a stream that uses an array as its source
+> - `toString`: Converting an array to a string. The toString method converts each element of the array to a string, separates them with commas, then surrounds them with brackets.
