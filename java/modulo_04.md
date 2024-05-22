@@ -164,3 +164,32 @@ A seguir, temos alguns métodos importantes da classe de Arrays do Java.
 > - `parallelSort`: Sorting an array into ascending order. This can be done either sequentially, using the sort method, or concurrently, using the parallelSort method introduced in Java SE 8. Parallel sorting of large arrays on multiprocessor systems is faster than sequential array sorting.
 > - `stream`: Creating a stream that uses an array as its source
 > - `toString`: Converting an array to a string. The toString method converts each element of the array to a string, separates them with commas, then surrounds them with brackets.
+
+### 2D Arrays
+
+Nesse caso, é criado um array composto por arrays.
+
+```java
+type [] [] arrayName;
+```
+
+#### Iterando sobre um array 2D
+
+Para iterar sobre um array com 2 dimensões, basta criar loops aninhados (*nested loops*).
+
+```java
+import java.util.Arrays;
+
+...
+
+public static void main(String[] args) {
+    int i, j;
+    int iStop = 3; // Stop do loop 1 (qtd. de iterações) 
+    int jStop = 4; // Stop do loop 2 (qtd. de iterações) 
+    for (i=0; i<=iStop; i++) {
+        for (j=0; j<=iStop; j++) {
+            System.out.println(Arrays.toString(new int[] {i, j}));
+        }
+    }
+}
+```
